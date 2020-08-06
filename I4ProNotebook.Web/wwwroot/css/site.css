@@ -1,0 +1,153 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.div-scroll {
+    height: 200px;
+    overflow-y: auto;
+}
+
+.btn-i4pro {
+    color: #fff;
+    background-color: #f85601;
+    border-color: #f85601;
+}
+
+.btn-i4pro:hover {
+    color: #fff;
+    background-color: #d94b00;
+    border-color: #d94b00;
+}
+
+.btn-i4pro:focus, .btn-i4pro.focus {
+    box-shadow: 0 0 0 0.2rem rgba(248, 86, 1, 0.5);
+}
+
+.btn-i4pro.disabled, .btn-i4pro:disabled {
+    color: #f85601 !important;
+    background-color: #f85601 !important;
+    border-color: #f85601 !important;
+}
+
+.btn-i4pro:not(:disabled):not(.disabled):active, .btn-i4pro:not(:disabled):not(.disabled).active,
+.show > .btn-i4pro.dropdown-toggle {
+    color: #f85601 !important;
+    background-color: #f85601 !important;
+    border-color: #f85601 !important;
+}
+
+.btn-i4pro:not(:disabled):not(.disabled):active:focus, .btn-i4pro:not(:disabled):not(.disabled).active:focus,
+.show > .btn-i4pro.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(248, 86, 1, 0.5);
+}
+
+.btn-outline-i4pro {
+    color: #f85601;
+    border-color: #f85601;
+}
+
+.btn-outline-i4pro:hover {
+    color: #fff;
+    background-color: #f85601;
+    border-color: #f85601;
+}
+
+.btn-outline-i4pro:focus, .btn-outline-i4pro.focus {
+    box-shadow: 0 0 0 0.2rem rgba(248, 86, 1, 0.5);
+}
+
+.btn-outline-i4pro.disabled, .btn-outline-i4pro:disabled {
+    color: #f85601;
+    background-color: transparent;
+}
+
+.btn-outline-i4pro:not(:disabled):not(.disabled):active, .btn-outline-i4pro:not(:disabled):not(.disabled).active,
+.show > .btn-outline-i4pro.dropdown-toggle {
+    color: #fff;
+    background-color: #f85601;
+    border-color: #f85601;
+}
+
+.btn-outline-i4pro:not(:disabled):not(.disabled):active:focus, .btn-outline-i4pro:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-i4pro.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(248, 86, 1, 0.5);
+}
+
+.div-padding-top {
+    padding-top: 50px;
+}
+
+.br-bottom{
+    padding-bottom: 10px;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}

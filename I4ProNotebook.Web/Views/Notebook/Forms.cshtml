@@ -1,0 +1,78 @@
+﻿<form id="notepadForm">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="Name">Nome</label>
+                <input required="required" type="text" class="form-control" id="Name" name="Name" placeholder="Ex.: Renan Fabiano" maxlength="50" v-model="name" />
+            </div>
+        </div>
+    </div>
+    <div class="row br-bottom">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="br-bottom">
+                        <div class="input-group">
+                            <input type="tel" class="form-control" id="addPhoneNumber" name="addPhoneNumber" placeholder="Ex.: (11) 9999-9999" maxlength="15" v-model="inputPhoneNumber" />
+                            <button type="button" id="btnAddPhoneNumber" v-on:click="addPhoneNumber()" class="btn btn-i4pro btn-sm">Adicionar</button>
+                        </div>                        
+                    </div>
+                    <div style="overflow-y: auto; height: 300px;">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Telefone</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(phone, index) in phoneNumbers">
+                                    <td>{{ phone.number }}</td>
+                                    <td class="float-right"><button type="button" v-bind="index" v-on:click="deletePhoneNumber(index, phone.id)" class="btn btn-sm btn-danger">Excluir</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="br-bottom">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="addEmail" name="addEmail" placeholder="Ex.: email@email.com" maxlength="2079" v-model="inputEmail">
+                            <button type="button" id="btnAddEmail" v-on:click="addEmails" class="btn btn-i4pro btn-sm">Adicionar</button>
+                        </div>                        
+                    </div>
+                    <div style="overflow-y: auto; height: 300px;">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>E-mail</th>
+                                </tr>
+                                <tr></tr>
+                            </thead>
+                            <tbody>
+                                <tr v-for="(email, index) in emails">
+                                    <td>{{ email.emailName }}</td>
+                                    <td class="float-right"><button type="button" v-bind="index" v-on:click="deleteEmails(index, email.id)" class="btn btn-sm btn-danger">Excluir</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <div class="btn-group">
+                    @Html.ActionLink("Voltar", "Index", "Notebook", new { }, new { @class = "btn btn-secondary" })
+                    <button type="button" class="btn btn-success" v-on:click="saveContact()">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

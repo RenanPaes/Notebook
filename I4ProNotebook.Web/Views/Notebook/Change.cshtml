@@ -1,0 +1,22 @@
+﻿@model I4PRONotebook.Entity.Models.Contact
+@{
+    ViewBag.Title = "Detalhes";
+}
+<div id="formContainer">
+    <div class="card">
+        <div class="card-header">
+            <h4>@Html.Raw(ViewBag.Title)</h4>
+        </div>
+        <div class="card-body">
+            <partial name="Forms">
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        var urlPost = '@Url.Action("Change", "Notebook", new {  })';
+        var urlIndex = '@Url.Action("Index", "Notebook", new { })';
+        var obj = @Html.Raw(Json.Serialize(Model));
+    </script>
+    <script src="~/js/formScript.js"></script>
+}

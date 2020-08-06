@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Cadastrar Contato";
+}
+<div id="formContainer">
+    <div class="card">
+        <div class="card-header">
+            <h4>@Html.Raw(ViewBag.Title)</h4>
+        </div>
+        <div class="card-body">
+            <partial name="Forms">
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        var urlPost = '@Url.Action("Register", "Notebook", new {  })';
+        var urlIndex = '@Url.Action("Index", "Notebook", new { })';
+        var obj = undefined;
+    </script>
+    <script src="~/js/formScript.js"></script>
+}

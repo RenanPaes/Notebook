@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Lista de Contatos";
+}
+<div id="indexContainer">
+    <div class="card">
+        <div class="card-header">
+            <h4>Contatos Cadastrados</h4>
+        </div>
+        <div class="card-body">
+            <div class="row br-bottom">
+                <div class="col-md-12" data-toggle="modal" data-target="#notepadModal">
+                    @Html.ActionLink("Novo Contato", "Register", "Notebook", new { }, new { @class = "btn btn-outline-i4pro" })
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th class="col-md-10">Nome</th>
+                                <th class="col-md-2"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="contact in contacts">
+                                <td>{{ contact.name }}</td>
+                                <td>
+                                    <button type="button" class="btn btn-i4pro" v-on:click="details(contact.id)">Detalhes</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        var urlPost = '@Url.Action("GetContacts", "Notebook", new {  })';
+        var urlDetails = '@Url.Action("Change", "Notebook", new {  })';
+    </script>
+    <script src="~/js/showContactScript.js"></script>
+}
+
